@@ -1,0 +1,30 @@
+JQUERY.FLASHFIT.JS
+by Jakub Przyborowski
+www.przyborowski.info
+www.przyb.net
+
+
+FlashFit is simple jquery and super light plugin developed to fit liquid flash sites. When developing flash sites, sometimes it is needed to make it 100% wide and high, but also maintain minimum dimensions, so if the window is reduced below the minimum size, scrollbars will appear.
+
+Its usage is as easy as:
+
+<div id="flashcontent"></div>
+<script type="text/javascript">
+(function($){
+	$('#flashcontent').flashfit({
+		minWidth: 960,
+		minHeight: 500
+	});
+
+	swfobject.embedSWF("demo.swf", "flashcontent", "100%", "100%", "10.0.0");
+})(window.jQuery);
+</script>
+
+One important thing is to apply flashfit before applying swfobject on a div. You should do so, because swfobject replaces the div with its own markup, so you cannot access it through simple jquery selector.
+
+If you want more features, try swffit available at http://swffit.millermedeiros.com/ - it's really great library, but more than 4 times bigger (4.2 KB) than flashfit (0.82 KB minified). You choose what you need ;)
+
+Oh, and I forget to mention, that it's fresh library that may be buggy just a little bit ;)
+
+good luck,
+Przyb
